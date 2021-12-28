@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Brush Script Std;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.35)),url(45.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+    animation: movedown 0.5s linear 1;
+    animation-delay: 0.5s;
+    visibility:hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movedown
+{
+     0%{
+         transform:translateY(-100px);
+         visibility: visible;
+        }
+     100%{
+         transform:translateY( 0px);
+         visibility: visible;
+        }
+}
+.outer-div{
+   min-width: width: 40px;
+    height: 30px;
+    padding: 10px;
+    background-color:#2E8B57;
+
+} 
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #cce0ff;
+    text-transform: uppercase;
+    animation: movedown 2s linear 1;
+    animation-delay: 2s;
+    visibility:hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movedown{
+     0%{
+         transform:translateY(-100px);
+         visibility: visible;
+        }
+     100%{
+         transform:translateY(0px);
+         visibility: visible;
+        }
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px; 
+    width: 100%;
+    background: #002966;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    animation: movedown 1.5s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movedown{
+     0%{
+         transform:translateY(-100px);
+         visibility: visible;
+        }
+     100%{
+         transform:translateY(0px);
+         visibility: visible;
+        }
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}   
+body{
+    margin: 0;
+    padding: 0;
+    font-weight: century Gothic;
+    background: url(45.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+   width: 60%;
+   height: 50vh;
+   background: rgba(0,0,0,0.89);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 0 20px;
+}
+.container h1{
+    color: white;
+    margin-top: 50px;
+}
+.container p
+{
+    color: white;
+    margin-top: 60px;
+
+}
+    
