@@ -1,0 +1,330 @@
+html {
+    background-color: #18681e ;
+    font: 62.5%/1.5em "Trebuchet Ms", helvetica;
+  }
+  
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+  }
+  
+  @font-face {
+      font-family: 'Shopper';
+      src: url('http://www.shopperfont.com/font/Shopper-Std.ttf');
+  }
+
+.navbar{
+    width: 95%;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 300px;
+    cursor: pointer;
+    animation: movedown 0.5s linear 1;
+    animation-delay: 0.5s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movedown{
+     0%{
+         transform:translateY(-100px);
+         visibility: visible;
+        }
+     100%{
+         transform:translateY(0px);
+         visibility: visible;
+        }
+}
+.outer-div{
+   min-width: 50px;
+    height: 40px;
+    padding: 30px;
+    background-color:#0c0e0d;
+
+} 
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 5px 5px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #d8e6d3;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: movedown 2s linear 1;
+    animation-delay: 2s;
+    visibility:hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movedown{
+     0%{
+         transform:translateY(-100px);
+         visibility: visible;
+        }
+     100%{
+         transform:translateY(0px);
+         visibility: visible;
+        }
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px; 
+    width: 100%;
+    background: #16335e;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    animation: movedown 1.5s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movedown{
+     0%{
+         transform:translateY(-100px);
+         visibility: visible;
+        }
+     100%{
+         transform:translateY(0px);
+         visibility: visible;
+        }
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}   
+  
+  .shopper {
+    text-transform: lowercase;
+    font: 2em 'Shopper', sans-serif;
+    line-height: 0.5em;
+    display: inline-block;
+  }
+  
+  
+  
+  h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5em;
+  }
+  
+  p {
+    font-size: 1.5em;
+    color: #8a8a8a;
+  }
+  
+  input {
+    border: 0.3em solid #bbc3c6;
+    padding: 0.5em 0.3em; 
+    font-size: 1.4em;
+    color: #8a8a8a;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 9em;
+    width: 100%;
+    overflow: hidden; 
+    margin-right: 1em;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 75em;
+    width: 95%;
+    margin: 40px auto;  
+    overflow: hidden;
+    position: relative;
+    
+    border-radius: 0.6em;
+    background: #ecf0f1;
+    box-shadow: 0 0.5em 0 rgba(138, 148, 152, 0.2);
+  }
+  
+  .heading {
+    padding: 1em;
+    position: relative;
+    z-index: 1;
+    color: #f7f7f7;
+    background: #58ce6c;
+  }
+  
+  .cart {
+    margin: 2.5em;
+    overflow: hidden;
+  }
+  
+  .cart.is-closed {
+    height: 0;
+    margin-top: -2.5em;
+  }
+  
+  .table {
+    background: #ffffff;
+    border-radius: 0.6em;
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 1.8em;
+  }
+  
+  
+  .layout-inline > * {
+    display: inline-block;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+  
+  .th {
+    background: #8cca28;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  
+  .tf {
+    background: #84e237;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 1.2em;  
+  }
+  
+  .tf p {
+    color: rgb(5, 3, 3);
+    font-weight: bold;
+  }
+  
+  .col {
+    padding: 1em;
+    width: 12%;
+  }
+  
+  .col-pro {
+    width: 44%;
+  }
+  
+  .col-pro > * {
+    vertical-align: middle;
+  }
+  
+  .col-qty {
+    text-align: center;
+    width: 17%;
+  }
+  
+  .col-numeric p {
+    font: bold 1.8em helvetica;
+  }
+  
+  .col-total p {
+    color: #12c8b1;
+  }
+  
+  .tf .col {
+    width: 20%;
+  }
+  
+  .row > div {
+    vertical-align: middle;
+  }
+  
+  .row-bg2 {
+    background: #f7f7f7;
+  }
+  
+  .visibility-cart {
+    position: absolute;
+    color: #fff;
+    top: 0.5em;
+    right: 0.5em;
+    font:  bold 2em arial;
+    border: 0.16em solid #fff;
+    border-radius: 2.5em;
+    padding: 0 0.22em 0 0.25em ;
+  }
+  
+  .col-qty > * {
+    vertical-align: middle; 
+  }
+  
+  .col-qty > input {
+    max-width: 2.6em;
+  }
+  
+  
+  a.qty {
+    width: 1em;
+    line-height: 1em;
+    border-radius: 2em;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    background: #e6dd90;  
+    color: #fff;
+  }
+  
+  a.qty:hover {
+    background: #3b9ac6;
+  }
+  
+  .btn {
+    padding: 10px 30px;
+    border-radius: 0.3em;
+    font-size: 1.4em;
+    font-weight: bold;
+    background: #43ace3;
+    color: #fff;
+    box-shadow: 0 3px 0 rgb(216, 243, 96)
+  }
+  
+  .btn:hover {
+    box-shadow: 0 3px 0 rgba(59,154,198, 0)
+  }
+  
+  .btn-update {
+    float: right;
+    margin: 0 0 1.5em 0;
+  }
+  
+  .transition {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  @media screen and ( max-width: 755px) {
+    .container {
+      width: 98%;
+    }
+    
+    .col-pro {
+      width: 35%;
+    }
+    
+    .col-qty {
+      width: 22%;
+    }
+    
+    img {
+      max-width: 100%;
+      margin-bottom: 1em;
+    }
+  }
+  
+  @media screen and ( max-width: 591px) {
+    
+  }
